@@ -326,13 +326,13 @@ p {
 }
 
 .logo-img {
-    height: 185px; /* Incremented by ~2.5x */
+    height: 45px; /* Logo is now cropped, needs much less height to display large letters */
     width: auto;
     object-fit: contain;
 }
 
 .footer-brand .logo-img {
-    height: 235px; /* Incremented by ~2.5x */
+    height: 60px; /* Cropped footer logo */
 }
 
 .nav-links {
@@ -700,17 +700,17 @@ p {
     .nav-links { display: none; }
     .menu-toggle { display: flex; }
     
-    /* Optimize Header and Logo for Mobile */
-    .logo-img { height: 80px !important; }
-    .footer-brand .logo-img { height: 120px !important; }
-    .navbar { padding: 10px 0; }
-    .navbar.scrolled { padding: 5px 0; }
+    /* Optimize Header and Logo for Mobile (Cropped Logo) */
+    .logo-img { height: 32px !important; }
+    .footer-brand .logo-img { height: 45px !important; }
+    .navbar { padding: 12px 0; }
+    .navbar.scrolled { padding: 8px 0; }
     
     /* Fix Typography and Overflows */
-    .hero { padding-top: 140px; } /* Clear massive header */
-    .headline { font-size: 2.2rem; line-height: 1.15; margin-bottom: 20px; }
+    .hero { padding-top: 100px; } /* Adjusted for thinner header */
+    .headline { font-size: 2rem; line-height: 1.2; margin-bottom: 20px; }
     .hero .subheadline { font-size: 1.05rem; margin-bottom: 30px; }
-    .section-title { font-size: 2rem; line-height: 1.2; word-wrap: break-word; hyphens: auto; }
+    .section-title { font-size: 1.8rem; line-height: 1.25; word-wrap: normal; hyphens: none; }
     .section-subtitle { font-size: 1.05rem; }
     .section { padding: 60px 0; }
     
