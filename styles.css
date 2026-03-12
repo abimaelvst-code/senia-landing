@@ -700,11 +700,26 @@ p {
     .nav-links { display: none; }
     .menu-toggle { display: flex; }
     
-    .headline { font-size: 2.8rem; }
+    /* Optimize Header and Logo for Mobile */
+    .logo-img { height: 80px !important; }
+    .footer-brand .logo-img { height: 120px !important; }
+    .navbar { padding: 10px 0; }
+    .navbar.scrolled { padding: 5px 0; }
+    
+    /* Fix Typography and Overflows */
+    .hero { padding-top: 140px; } /* Clear massive header */
+    .headline { font-size: 2.2rem; line-height: 1.15; margin-bottom: 20px; }
+    .hero .subheadline { font-size: 1.05rem; margin-bottom: 30px; }
+    .section-title { font-size: 2rem; line-height: 1.2; word-wrap: break-word; hyphens: auto; }
+    .section-subtitle { font-size: 1.05rem; }
+    .section { padding: 60px 0; }
+    
+    /* Layouts */
     .cta-group { flex-direction: column; }
-    
     .grid-3, .grid-4 { grid-template-columns: 1fr; }
-    
-    .form-group { flex-direction: column; }
     .footer-top { flex-direction: column; }
+    
+    /* Sub-scale tech diagram to fit mobile screens */
+    .glass-circle { width: 260px; height: 260px; }
+    .central-node { width: 80px; height: 80px; font-size: 1rem; }
 }
