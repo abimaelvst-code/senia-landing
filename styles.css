@@ -140,12 +140,14 @@ p {
 .section-title {
     font-size: 3rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .section-subtitle {
     font-size: 1.25rem;
     max-width: 600px;
     margin: 0 auto 3rem;
+    text-align: center;
 }
 
 /* =========================================
@@ -404,12 +406,14 @@ p {
 .headline {
     font-size: 4.5rem;
     margin-bottom: 24px;
+    text-align: center;
 }
 
 .hero .subheadline {
     font-size: 1.25rem;
     max-width: 650px;
     margin: 0 auto 40px;
+    text-align: center;
 }
 
 .cta-group {
@@ -529,14 +533,15 @@ p {
 }
 
 .glass-circle {
-    width: 300px; height: 300px;
+    width: 320px; height: 320px; /* Increased circumference */
     border-radius: 50%;
     border: 1px dashed var(--glass-border);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    animation: spin 60s linear infinite;
+    /* We spin the entire container */
+    animation: spin-container 40s linear infinite;
 }
 
 .node {
@@ -552,30 +557,37 @@ p {
 }
 
 .central-node {
-    width: 100px; height: 100px;
+    width: 110px; height: 110px;
     border-radius: 50%;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     border-color: var(--accent-cyan);
     box-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
     z-index: 10;
-    animation: pulse 3s infinite alternate;
+    position: absolute; /* Take out of flow to stay dead center */
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    /* We must counter-spin the central node so SENIA text stays upright */
+    animation: counter-spin-node 40s linear infinite, pulse 3s infinite alternate;
 }
 
 .mini-node {
     position: absolute;
-    width: 60px; height: 60px;
-    font-size: 0.8rem;
-    animation: counter-spin 60s linear infinite;
+    width: 65px; height: 65px;
+    font-size: 0.85rem;
+    /* We must counter-spin every mini node at the exact same speed to stay upright */
+    animation: counter-spin-node 40s linear infinite;
 }
 
-.api { top: -30px; left: 50%; transform: translateX(-50%); }
-.ai { bottom: -30px; left: 50%; transform: translateX(-50%); }
-.cloud { left: -30px; top: 50%; transform: translateY(-50%); }
-.crm { right: -30px; top: 50%; transform: translateY(-50%); }
-.data { bottom: 20px; right: 20px; }
+/* Position nodes around the circle (further out) */
+.api { top: -32px; left: 50%; margin-left: -32px; }
+.ai { bottom: -32px; left: 50%; margin-left: -32px; }
+.cloud { left: -32px; top: 50%; margin-top: -32px; }
+.crm { right: -32px; top: 50%; margin-top: -32px; }
+.data { bottom: 15px; right: 15px; } /* Placed at 45 degree angle roughly */
 
-@keyframes spin { 100% { transform: rotate(360deg); } }
-@keyframes counter-spin { 100% { transform: rotate(-360deg); } }
+/* Animations */
+@keyframes spin-container { 100% { transform: rotate(360deg); } }
+@keyframes counter-spin-node { 100% { transform: rotate(-360deg); } }
 @keyframes pulse { 0% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.1); } 100% { box-shadow: 0 0 40px rgba(0, 242, 254, 0.4); } }
 
 /* Results */
@@ -701,25 +713,38 @@ p {
     .menu-toggle { display: flex; }
     
     /* Optimize Header and Logo for Mobile (Cropped Logo) */
-    .logo-img { height: 32px !important; }
-    .footer-brand .logo-img { height: 45px !important; }
+    .logo-img { 
+        height: 32px !important; 
+        /* Visually scale logo 3x without affecting the thin navbar height */
+        transform: scale(2.5); 
+        transform-origin: left center;
+        margin-left: 20px;
+    }
+    .footer-brand .logo-img { 
+        height: 45px !important; 
+        transform: scale(2.5); 
+        transform-origin: center center;
+        margin-bottom: 20px;
+    }
     .navbar { padding: 12px 0; }
     .navbar.scrolled { padding: 8px 0; }
     
     /* Fix Typography and Overflows */
     .hero { padding-top: 100px; } /* Adjusted for thinner header */
-    .headline { font-size: 2rem; line-height: 1.2; margin-bottom: 20px; }
-    .hero .subheadline { font-size: 1.05rem; margin-bottom: 30px; }
-    .section-title { font-size: 1.8rem; line-height: 1.25; word-wrap: normal; hyphens: none; }
-    .section-subtitle { font-size: 1.05rem; }
+    .headline { font-size: 2.1rem; line-height: 1.25; margin-bottom: 20px; text-align: center; }
+    .hero .subheadline { font-size: 1.05rem; margin-bottom: 30px; text-align: center; }
+    .section-title { font-size: 1.9rem; line-height: 1.25; word-wrap: normal; hyphens: none; text-align: center; }
+    .section-subtitle { font-size: 1.05rem; text-align: center; }
     .section { padding: 60px 0; }
     
     /* Layouts */
     .cta-group { flex-direction: column; }
     .grid-3, .grid-4 { grid-template-columns: 1fr; }
-    .footer-top { flex-direction: column; }
+    .footer-top { flex-direction: column; text-align: center; }
+    .link-group { text-align: center; }
+    .footer-bottom { flex-direction: column; text-align: center; gap: 15px; }
     
     /* Sub-scale tech diagram to fit mobile screens */
-    .glass-circle { width: 260px; height: 260px; }
-    .central-node { width: 80px; height: 80px; font-size: 1rem; }
+    .glass-circle { width: 260px !important; height: 260px !important; }
+    .central-node { width: 90px; height: 90px; font-size: 1.1rem; }
 }
