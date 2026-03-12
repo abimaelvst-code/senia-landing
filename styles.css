@@ -328,13 +328,19 @@ p {
 }
 
 .logo-img {
-    height: 45px; /* Logo is now cropped, needs much less height to display large letters */
+    height: 35px; /* Keeps container thin */
     width: auto;
     object-fit: contain;
+    transform: scale(3.5); /* Emula el tamaño 3.5 veces mayor */
+    transform-origin: left center;
+    margin-left: 20px;
 }
 
 .footer-brand .logo-img {
-    height: 60px; /* Cropped footer logo */
+    height: 45px; /* Cropped footer logo */
+    transform: scale(3.5);
+    transform-origin: center center;
+    margin-bottom: 25px; /* Espacio para que el scaling no se encime */
 }
 
 .nav-links {
@@ -565,7 +571,7 @@ p {
     z-index: 10;
     position: absolute; /* Take out of flow to stay dead center */
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    margin: -55px 0 0 -55px; /* Center mathematically instead of translate */
     /* We must counter-spin the central node so SENIA text stays upright */
     animation: counter-spin-node 40s linear infinite, pulse 3s infinite alternate;
 }
@@ -574,16 +580,17 @@ p {
     position: absolute;
     width: 65px; height: 65px;
     font-size: 0.85rem;
+    margin: -32.5px 0 0 -32.5px; /* Exact center anchors for coordinate placement */
     /* We must counter-spin every mini node at the exact same speed to stay upright */
     animation: counter-spin-node 40s linear infinite;
 }
 
-/* Position nodes around the circle (further out) */
-.api { top: -32px; left: 50%; margin-left: -32px; }
-.ai { bottom: -32px; left: 50%; margin-left: -32px; }
-.cloud { left: -32px; top: 50%; margin-top: -32px; }
-.crm { right: -32px; top: 50%; margin-top: -32px; }
-.data { bottom: 15px; right: 15px; } /* Placed at 45 degree angle roughly */
+/* Position nodes geometrically in a perfect pentagon (0, 72, 144, 216, 288 degrees) */
+.api   { left: 50%;     top: 0%; }
+.data  { left: 97.55%;  top: 19.10%; }
+.ai    { left: 79.39%;  top: 90.45%; }
+.cloud { left: 20.61%;  top: 90.45%; }
+.crm   { left: 2.45%;   top: 19.10%; }
 
 /* Animations */
 @keyframes spin-container { 100% { transform: rotate(360deg); } }
@@ -714,17 +721,17 @@ p {
     
     /* Optimize Header and Logo for Mobile (Cropped Logo) */
     .logo-img { 
-        height: 32px !important; 
-        /* Visually scale logo 3x without affecting the thin navbar height */
-        transform: scale(2.5); 
+        height: 25px !important; 
+        /* Visually scale logo heavily without affecting the thin navbar height */
+        transform: scale(3.5) !important; 
         transform-origin: left center;
         margin-left: 20px;
     }
     .footer-brand .logo-img { 
-        height: 45px !important; 
-        transform: scale(2.5); 
+        height: 35px !important; 
+        transform: scale(3.5) !important; 
         transform-origin: center center;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
     .navbar { padding: 12px 0; }
     .navbar.scrolled { padding: 8px 0; }
@@ -746,5 +753,5 @@ p {
     
     /* Sub-scale tech diagram to fit mobile screens */
     .glass-circle { width: 260px !important; height: 260px !important; }
-    .central-node { width: 90px; height: 90px; font-size: 1.1rem; }
+    .central-node { width: 90px; height: 90px; font-size: 1.1rem; margin: -45px 0 0 -45px; }
 }
