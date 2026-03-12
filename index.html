@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENIA | Inteligencia Artificial y Automatización</title>
+    <meta name="description" content="SENIA es una empresa de tecnología y automatización con IA que ayuda a escalar negocios con sistemas inteligentes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Canvas for background cursor particle effects -->
+    <canvas id="cursor-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="LOGO_SENIA_CLEAN.png" alt="SENIA Logo" class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="#soluciones" class="nav-item">Soluciones</a>
+                <a href="#proceso" class="nav-item">Cómo funciona</a>
+                <a href="#tecnologia" class="nav-item">Tecnología</a>
+                <a href="#contacto" class="btn btn-outline btn-sm">Diagnóstico</a>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-content reveal-up">
+                <div class="badge">Sistemas Inteligentes</div>
+                <h1 class="headline">Impulsamos negocios con <span class="text-gradient">inteligencia artificial</span> y automatización</h1>
+                <p class="subheadline">Diseñamos sistemas inteligentes que automatizan procesos, optimizan operaciones y permiten a las empresas escalar con tecnología.</p>
+                <div class="cta-group">
+                    <a href="#contacto" class="btn btn-primary glow-effect">Solicitar diagnóstico gratuito</a>
+                    <a href="#proceso" class="btn btn-secondary glass-btn">
+                        <span>Ver cómo funciona</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PROBLEM -->
+    <section class="section problem" id="problema">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <h2 class="section-title">La mayoría de los negocios <span class="text-gradient-red">pierden oportunidades</span> por falta de sistemas</h2>
+                <p class="section-subtitle">El crecimiento se estanca cuando dependes de procesos manuales y desorganizados.</p>
+            </div>
+            
+            <div class="grid grid-3 problem-grid">
+                <div class="card problem-card glass-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="card-icon red-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Tiempo desperdiciado</h3>
+                    <p>Horas de trabajo invertidas en tareas repetitivas y procesos manuales.</p>
+                </div>
+                <div class="card problem-card glass-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="card-icon red-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Pérdida de leads</h3>
+                    <p>Oportunidades de venta que se enfrían por falta de velocidad de respuesta.</p>
+                </div>
+                <div class="card problem-card glass-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="card-icon red-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-3-3v6m-9 3h18a2 2 0 002-2V8a2 2 0 00-2-2H9L3 12l6 6H21" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Falta de seguimiento</h3>
+                    <p>Clientes potenciales abandonados a la mitad del embudo sin nutrición automatizada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SOLUTION -->
+    <section class="section solution" id="soluciones">
+        <div class="bg-blur-circle top-right"></div>
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2 class="section-title">Transformamos tu negocio con <span class="text-gradient">sistemas inteligentes</span></h2>
+                <p class="section-subtitle">Servicios integrales diseñados para escalar tus operaciones.</p>
+            </div>
+            
+            <div class="grid grid-3 solution-grid">
+                <div class="card glass-card solution-card reveal-up">
+                    <div class="card-icon cyan-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>AI Automation</h3>
+                    <p>Agentes inteligentes y asistentes que resuelven consultas operativas 24/7 sin intervención humana.</p>
+                </div>
+                <div class="card glass-card solution-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="card-icon cyan-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Workflow Automation</h3>
+                    <p>Conectamos tus aplicaciones para que los datos fluyan automáticamente entre departamentos.</p>
+                </div>
+                <div class="card glass-card solution-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="card-icon cyan-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>CRM Systems</h3>
+                    <p>Implementación y optimización de CRMs para centralizar la información de tus clientes y ventas.</p>
+                </div>
+                <div class="card glass-card solution-card reveal-up">
+                    <div class="card-icon cyan-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5M10 12l2.25 1.5M14 12l-2.25 1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Lead Capture Systems</h3>
+                    <p>Embudos de alta conversión diseñados para captar y pre-calificar prospectos automáticamente.</p>
+                </div>
+                <div class="card glass-card solution-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="card-icon cyan-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Digital Infrastructure</h3>
+                    <p>Arquitectura tecnológica escalable y segura para soportar el crecimiento de tu empresa.</p>
+                </div>
+                <div class="card glass-card solution-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="card-icon cyan-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Intelligent Follow-up</h3>
+                    <p>Secuencias de seguimiento dinámico basadas en comportamiento para maximizar el cierre de ventas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: HOW IT WORKS -->
+    <section class="section process" id="proceso">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <h2 class="section-title">Nuestra metodología de <span class="text-gradient">transformación</span></h2>
+            </div>
+            
+            <div class="process-flow">
+                <div class="process-line"></div>
+                <div class="process-step reveal-up">
+                    <div class="step-number">01</div>
+                    <div class="step-content glass-card">
+                        <h3>Diagnóstico estratégico</h3>
+                        <p>Analizamos tus procesos actuales, identificamos cuellos de botella y oportunidades potenciales de automatización.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-up" style="transition-delay: 0.1s;">
+                    <div class="step-number">02</div>
+                    <div class="step-content glass-card">
+                        <h3>Diseño del sistema</h3>
+                        <p>Arquitectamos una solución tecnológica a medida que se integre perfectamente con la visión de tu negocio.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-up" style="transition-delay: 0.2s;">
+                    <div class="step-number">03</div>
+                    <div class="step-content glass-card">
+                        <h3>Implementación y automatización</h3>
+                        <p>Desarrollamos, conectamos y probamos el sistema antes de su lanzamiento, asegurando un funcionamiento fluido.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-up" style="transition-delay: 0.3s;">
+                    <div class="step-number">04</div>
+                    <div class="step-content glass-card">
+                        <h3>Escalamiento del negocio</h3>
+                        <p>Monitoreamos los resultados, optimizamos el rendimiento y expandimos las capacidades para impulsar mayor crecimiento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: TECHNOLOGY -->
+    <section class="section technology overflow-hidden" id="tecnologia">
+        <div class="container grid grid-2 align-center">
+            <div class="tech-content reveal-up">
+                <h2 class="section-title">Ecosistema <span class="text-gradient">tecnológico</span> integrado</h2>
+                <p class="section-subtitle mb-8">Construimos sobre las herramientas más potentes del mercado para garantizar sistemas robustos.</p>
+                
+                <ul class="tech-list mt-8">
+                    <li><span class="dot cyan"></span> Automatización (Make, Zapier)</li>
+                    <li><span class="dot blue"></span> Inteligencia artificial (OpenAI, Claude)</li>
+                    <li><span class="dot cyan"></span> Integraciones Nativas y APIs</li>
+                    <li><span class="dot blue"></span> Infraestructura Cloud (Vercel, AWS)</li>
+                    <li><span class="dot cyan"></span> Sistemas de Datos (Airtable, Postgres)</li>
+                </ul>
+            </div>
+            
+            <div class="tech-diagram reveal-up" style="transition-delay: 0.2s;">
+                <div class="diagram-center relative glass-circle">
+                    <!-- Central Node -->
+                    <div class="node central-node pulse-glow">SENIA</div>
+                    <!-- Orbiting Nodes -->
+                    <div class="orbit orbit-1">
+                        <div class="node mini-node api">API</div>
+                        <div class="node mini-node ai">AI</div>
+                    </div>
+                    <div class="orbit orbit-2">
+                        <div class="node mini-node cloud">Cloud</div>
+                        <div class="node mini-node crm">CRM</div>
+                        <div class="node mini-node data">Data</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: RESULTS -->
+    <section class="section results" id="resultados">
+        <div class="bg-blur-circle bottom-left"></div>
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <h2 class="section-title">Resultados que <span class="text-gradient">transforman empresas</span></h2>
+            </div>
+            
+            <div class="grid grid-4 counters-grid">
+                <div class="counter-card glass-card reveal-up">
+                    <div class="counter-value"><span class="number" data-target="95">0</span>%</div>
+                    <p class="counter-label">Captura automatizada de leads</p>
+                </div>
+                <div class="counter-card glass-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="counter-value"><span class="number" data-target="100">0</span>%</div>
+                    <p class="counter-label">Seguimientos automáticos</p>
+                </div>
+                <div class="counter-card glass-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="counter-value">+<span class="number" data-target="40">0</span>%</div>
+                    <p class="counter-label">Eficiencia operativa</p>
+                </div>
+                <div class="counter-card glass-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="counter-value"><span class="number" data-target="3">0</span>x</div>
+                    <p class="counter-label">Oportunidades comerciales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: FINAL CTA -->
+    <section class="section final-cta" id="contacto">
+        <div class="container">
+            <div class="cta-box glass-card text-center reveal-up">
+                <div class="box-glow"></div>
+                <h2>Convierte tu negocio en un <span class="text-gradient">sistema inteligente</span></h2>
+                <p>Agenda una evaluación estratégica gratuita y descubre el potencial oculto de tus operaciones.</p>
+                <form class="lead-form mt-8" id="contact-form">
+                    <div class="form-fields vertical-flow">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required class="glass-input">
+                        <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required class="glass-input">
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp (Ej: +52...)" required class="glass-input">
+                        <button type="submit" class="btn btn-primary glow-effect w-100" id="submit-btn">Solicitar diagnóstico</button>
+                    </div>
+                    <div id="form-message" class="form-message">
+                        <p class="success-text">¡Gracias! Hemos recibido tus datos y nos pondremos en contacto pronto.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="LOGO_SENIA_CLEAN.png" alt="SENIA Logo" class="logo-img">
+                    </a>
+                    <p class="brand-msg mt-4">Impulsamos Negocios con Inteligencia y Automatización</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Empresa</h4>
+                        <a href="#soluciones">Soluciones</a>
+                        <a href="#proceso">Cómo funciona</a>
+                        <a href="#contacto">Contacto</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Social</h4>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom mt-8 border-t border-glass pt-8 flex justify-between">
+                <p>&copy; 2026 SENIA. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="#">senia.tech</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
